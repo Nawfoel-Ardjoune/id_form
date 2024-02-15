@@ -1,62 +1,60 @@
 html body {
     background-color: #e9ecee;
     font-family: "Inter", sans-serif;
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
-    padding: 2.5vh 10vw;
+    /* padding: 2.5vh 10vw; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
   }
 
-  html body .container {
-    background-color: rgb(255, 119, 0);
+  img {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/*Le block de connexion*/
+  #container {
     width: 100%;
-    max-width: 768px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 2rem 1.5rem;
+    /* padding: 2rem 2rem 1.5rem; */
+    /* border: 2px skyblue; */
   }
-  @media (min-width: 768px) {
-    html body .container {
-      flex-direction: row;
-      align-items: center;
-    }
-  }
-  html body .container .cta-form {
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  @media (min-width: 768px) {
-    html body .container .cta-form {
-      margin-bottom: 0;
-      margin-right: 2rem;
-      text-align: left;
-    }
-  }
-  html body .container .cta-form h2 {
-    font-size: 1.5rem;
-    width: 100%;
-    max-width: 25ch;
-    margin: 0 auto;
-    text-align: center;
-  }
-  @media (min-width: 768px) {
-    html body .container .cta-form h2 {
-      text-align: left;
-      margin: 0;
-    }
-  }
-  html body .container .cta-form p {
-    margin-top: 1rem;
-    font-size: 1rem;
-    width: 100%;
-    max-width: 24ch;
-  }
-/* Bordered form */
+
+/*La barre qui contient les boutons*/
+#box-option-formulaire {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 10px;
+}
+
+#infoBulle{
+  color: red;
+}
+/*Les boutons sous les champs*/
+.bouton{
+  display: inline-block;
+  margin: 5PX;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ca1a1a; /* Couleur de fond du bouton */
+  color: #fff; /* Couleur du texte */
+  border-radius: 5px; /* Bords arrondis */
+  transition: background-color 0.3s; /* Transition lors du survol */
+}
+
+/* La mise en form des champs du formulaire récupérer depuis une template */
 html .form {
     align-self: center;
   }
@@ -69,6 +67,7 @@ html .form {
     margin: 0.625rem auto;
     transition: all 250ms;
   }
+
   @media (min-width: 768px) {
     html .form__input {
       width: clamp(120px, 35vw, 420px);

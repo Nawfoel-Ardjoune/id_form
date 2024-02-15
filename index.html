@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head lang="fr">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Formulaire d'authentification</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="./script/main.js"></script>
+</head>
+<html>
+    <body>
+        <div id="container">
+            <img src="./image/logo_p8.png" alt="Le logo de l'université de paris 8"> 
+
+            <form onsubmit="send(event)" class="form">
+                <h2>Connexion à votre compte</h2>
+                <input type="text" placeholder="identifiant" class="form__input" id="name" name="name" required>
+                <label for="name" class="form__label">identifiant ou email :</label>
+      
+                <input type="password" placeholder="Mot de passe" class="form__input" id="password" name="password" autocomplete="off" required>
+                <label for="password" class="form__label">Mot de passe</label>
+
+                <label for="afficherMotDePasse">Afficher le mot de passe :</label>
+                <input type="checkbox" class="bouton" id="afficherMotDePasse" onclick="affichermdp()">
+
+                <div id="infoBulle">
+                </div>
+
+                <div id="box-option-formulaire">
+                    <a type="button" id="reset-bouton" onclick="reset()" class="bouton">RESET</a>
+                    <button type="submit" id='submit-bouton' class="bouton">LOGIN</button>
+                    <a type="button" id="sing-bouton" class="bouton" href="./singup-page/singup.html">CREE UN COMPTE</a>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
